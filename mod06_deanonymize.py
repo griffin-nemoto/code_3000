@@ -24,7 +24,7 @@ def link_records(anon_df, aux_df):
     match_anon = merge.groupby('anon_id')['anon_id'].transform('count')
     match_aux = merge.groupby('name')['name'].transform('count')
     
-    unique = merge[(match_anon ==1) and (match_aux ==1)].copy()
+    unique = merge[(match_anon ==1) & (match_aux ==1)].copy()
     return unique[['anon_id','name']].rename(columns={'name':'match'})
 
 
