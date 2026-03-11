@@ -35,4 +35,4 @@ def deanonymization_rate(matches_df, anon_df):
     """
     if len(anon_df) == 0:
         return 0.0
-    return len(matches_df) / len(matches_df)
+    return len(matches_df) / len(anon_df)
